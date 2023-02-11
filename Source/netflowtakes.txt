@@ -1,0 +1,11 @@
+Netflow takes 0.007
+Netflow takes 0.007
+Netflow takes 0.008
+Netflow takes 0.006
+Netflow takes 0.005
+-- above NetSimplex --
+Netflow takes 0.017
+Netflow takes 0.006
+Netflow takes 0.012
+Netflow takes 0.014
+Netflow takes 0.014

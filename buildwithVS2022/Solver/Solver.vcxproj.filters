@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Delaunator">
+      <UniqueIdentifier>{7de48918-0d7b-41f9-a3ad-72acaac865cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CVRP">
+      <UniqueIdentifier>{cfebb55e-73e9-4b48-b43e-2dbc20e5f4d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gurobi">
+      <UniqueIdentifier>{0914240b-98b9-4aec-aef2-0420051c73fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{c1904f64-450e-457e-9331-21d59a3ea8bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lemon">
+      <UniqueIdentifier>{f3d196a3-faa9-4c9b-b323-0c65c76f1a53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lemon\bits">
+      <UniqueIdentifier>{4baa0aae-213c-4e6f-af93-defd5a9ddc8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lemon\concepts">
+      <UniqueIdentifier>{4de40b5f-dfff-4c23-b474-0a57bab9cd9a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Libs\CVRP\CrossOver.h">
+      <Filter>CVRP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\CVRP\CvrpParameters.h">
+      <Filter>CVRP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\CVRP\CvrpTypeDef.h">
+      <Filter>CVRP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\CVRP\Framework.h">
+      <Filter>CVRP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\CVRP\Individual.h">
+      <Filter>CVRP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\CVRP\LocalSearch.h">
+      <Filter>CVRP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\CVRP\NagataBase.h">
+      <Filter>CVRP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\CVRP\NagataLocalSearch.h">
+      <Filter>CVRP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\CVRP\PathRelinking.h">
+      <Filter>CVRP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\CVRP\Population.h">
+      <Filter>CVRP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\CVRP\Repair.h">
+      <Filter>CVRP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\Delaunator\delaunator.hpp">
+      <Filter>Delaunator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\Gurobi\Flag.h">
+      <Filter>Gurobi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\Gurobi\Gurobi.h">
+      <Filter>Gurobi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\Gurobi\Preprocessor.h">
+      <Filter>Gurobi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\Gurobi\Typedef.h">
+      <Filter>Gurobi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\arg_parser.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\bellman_ford.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\bfs.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\bin_heap.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\binomial_heap.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\bucket_heap.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\capacity_scaling.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\cbc.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\christofides_tsp.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\circulation.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\clp.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\color.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\concept_check.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\config.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\connectivity.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\core.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\cost_scaling.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\counter.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\cplex.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\cycle_canceling.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\dfs.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\dheap.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\dijkstra.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\dim2.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\dimacs.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\edge_set.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\edmonds_karp.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\elevator.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\error.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\euler.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\fib_heap.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\fractional_matching.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\full_graph.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\glpk.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\gomory_hu.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\graph_to_eps.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\greedy_tsp.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\grid_graph.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\grosso_locatelli_pullan_mc.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\hao_orlin.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\hartmann_orlin_mmc.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\howard_mmc.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\hypercube_graph.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\insertion_tsp.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\karp_mmc.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\kruskal.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\lassert.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\lgf_reader.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\lgf_writer.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\list_graph.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\lmath.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\lp.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\lp_base.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\lp_skeleton.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\maps.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\matching.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\max_cardinality_search.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\min_cost_arborescence.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\nagamochi_ibaraki.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\nauty_reader.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\nearest_neighbor_tsp.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\network_simplex.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\opt2_tsp.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\pairing_heap.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\path.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\planarity.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\preflow.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\quad_heap.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\radix_heap.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\radix_sort.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\random.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\smart_graph.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\soplex.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\static_graph.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\suurballe.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\time_measure.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\tolerance.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\unionfind.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\adaptors.h">
+      <Filter>lemon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\bits\alteration_notifier.h">
+      <Filter>lemon\bits</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\bits\array_map.h">
+      <Filter>lemon\bits</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\bits\bezier.h">
+      <Filter>lemon\bits</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\bits\default_map.h">
+      <Filter>lemon\bits</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\bits\edge_set_extender.h">
+      <Filter>lemon\bits</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\bits\enable_if.h">
+      <Filter>lemon\bits</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\bits\graph_adaptor_extender.h">
+      <Filter>lemon\bits</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\bits\graph_extender.h">
+      <Filter>lemon\bits</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\bits\lock.h">
+      <Filter>lemon\bits</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\bits\map_extender.h">
+      <Filter>lemon\bits</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\bits\path_dump.h">
+      <Filter>lemon\bits</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\bits\solver_bits.h">
+      <Filter>lemon\bits</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\bits\traits.h">
+      <Filter>lemon\bits</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\bits\variant.h">
+      <Filter>lemon\bits</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\bits\vector_map.h">
+      <Filter>lemon\bits</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\bits\windows.h">
+      <Filter>lemon\bits</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\concepts\bpgraph.h">
+      <Filter>lemon\concepts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\concepts\digraph.h">
+      <Filter>lemon\concepts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\concepts\graph.h">
+      <Filter>lemon\concepts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\concepts\graph_components.h">
+      <Filter>lemon\concepts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\concepts\heap.h">
+      <Filter>lemon\concepts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\concepts\maps.h">
+      <Filter>lemon\concepts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Libs\lemon\concepts\path.h">
+      <Filter>lemon\concepts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\CmdLineParser.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\CvrpCaller.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GrbCaller.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\NetflowCaller.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Parameters.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Solution.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Solver.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TypeDef.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Untils.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Libs\CVRP\CrossOver.cpp">
+      <Filter>CVRP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libs\CVRP\CvrpParameters.cpp">
+      <Filter>CVRP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libs\CVRP\CvrpTypeDef.cpp">
+      <Filter>CVRP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libs\CVRP\Framework.cpp">
+      <Filter>CVRP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libs\CVRP\Individual.cpp">
+      <Filter>CVRP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libs\CVRP\NagataBase.cpp">
+      <Filter>CVRP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libs\CVRP\NagataLocalSearch.cpp">
+      <Filter>CVRP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libs\CVRP\PathRelinking.cpp">
+      <Filter>CVRP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libs\CVRP\Population.cpp">
+      <Filter>CVRP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libs\CVRP\Repair.cpp">
+      <Filter>CVRP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libs\Gurobi\Gurobi.cpp">
+      <Filter>Gurobi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libs\lemon\arg_parser.cc">
+      <Filter>lemon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libs\lemon\base.cc">
+      <Filter>lemon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libs\lemon\color.cc">
+      <Filter>lemon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libs\lemon\lp_base.cc">
+      <Filter>lemon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libs\lemon\lp_skeleton.cc">
+      <Filter>lemon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libs\lemon\lrandom.cc">
+      <Filter>lemon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libs\lemon\bits\windows.cc">
+      <Filter>lemon\bits</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CvrpCaller.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NetflowCaller.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Parameters.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Solution.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Solver.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SolverAdjusting.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SolverFinding.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SolverHasher.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SolverRefining.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TypeDef.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Utils.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{08FDA961-21CC-4601-8B2A-E967E3A2E6C1}</ProjectGuid>
+    <RootNamespace>Solver</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)..\Deploy</OutDir>
+    <IntDir>$(ProjectDir)bin\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)..\Deploy</OutDir>
+    <IntDir>$(ProjectDir)bin\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\Libs;D:\gurobi1001\win64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>D:\gurobi1001\win64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Libs;D:\gurobi1001\win64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>D:\gurobi1001\win64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gurobi100.lib;gurobi_c++mdd2017.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\Libs;D:\gurobi1001\win64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>D:\gurobi1001\win64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Libs;D:\gurobi1001\win64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>D:\gurobi1001\win64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gurobi100.lib;gurobi_c++md2019.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Libs\CVRP\CrossOver.h" />
+    <ClInclude Include="..\..\Libs\CVRP\CvrpParameters.h" />
+    <ClInclude Include="..\..\Libs\CVRP\CvrpTypeDef.h" />
+    <ClInclude Include="..\..\Libs\CVRP\Framework.h" />
+    <ClInclude Include="..\..\Libs\CVRP\Individual.h" />
+    <ClInclude Include="..\..\Libs\CVRP\LocalSearch.h" />
+    <ClInclude Include="..\..\Libs\CVRP\NagataBase.h" />
+    <ClInclude Include="..\..\Libs\CVRP\NagataLocalSearch.h" />
+    <ClInclude Include="..\..\Libs\CVRP\PathRelinking.h" />
+    <ClInclude Include="..\..\Libs\CVRP\Population.h" />
+    <ClInclude Include="..\..\Libs\CVRP\Repair.h" />
+    <ClInclude Include="..\..\Libs\Delaunator\delaunator.hpp" />
+    <ClInclude Include="..\..\Libs\Gurobi\Flag.h" />
+    <ClInclude Include="..\..\Libs\Gurobi\Gurobi.h" />
+    <ClInclude Include="..\..\Libs\Gurobi\Preprocessor.h" />
+    <ClInclude Include="..\..\Libs\Gurobi\Typedef.h" />
+    <ClInclude Include="..\..\Libs\lemon\adaptors.h" />
+    <ClInclude Include="..\..\Libs\lemon\arg_parser.h" />
+    <ClInclude Include="..\..\Libs\lemon\bellman_ford.h" />
+    <ClInclude Include="..\..\Libs\lemon\bfs.h" />
+    <ClInclude Include="..\..\Libs\lemon\binomial_heap.h" />
+    <ClInclude Include="..\..\Libs\lemon\bin_heap.h" />
+    <ClInclude Include="..\..\Libs\lemon\bits\alteration_notifier.h" />
+    <ClInclude Include="..\..\Libs\lemon\bits\array_map.h" />
+    <ClInclude Include="..\..\Libs\lemon\bits\bezier.h" />
+    <ClInclude Include="..\..\Libs\lemon\bits\default_map.h" />
+    <ClInclude Include="..\..\Libs\lemon\bits\edge_set_extender.h" />
+    <ClInclude Include="..\..\Libs\lemon\bits\enable_if.h" />
+    <ClInclude Include="..\..\Libs\lemon\bits\graph_adaptor_extender.h" />
+    <ClInclude Include="..\..\Libs\lemon\bits\graph_extender.h" />
+    <ClInclude Include="..\..\Libs\lemon\bits\lock.h" />
+    <ClInclude Include="..\..\Libs\lemon\bits\map_extender.h" />
+    <ClInclude Include="..\..\Libs\lemon\bits\path_dump.h" />
+    <ClInclude Include="..\..\Libs\lemon\bits\solver_bits.h" />
+    <ClInclude Include="..\..\Libs\lemon\bits\traits.h" />
+    <ClInclude Include="..\..\Libs\lemon\bits\variant.h" />
+    <ClInclude Include="..\..\Libs\lemon\bits\vector_map.h" />
+    <ClInclude Include="..\..\Libs\lemon\bits\windows.h" />
+    <ClInclude Include="..\..\Libs\lemon\bucket_heap.h" />
+    <ClInclude Include="..\..\Libs\lemon\capacity_scaling.h" />
+    <ClInclude Include="..\..\Libs\lemon\cbc.h" />
+    <ClInclude Include="..\..\Libs\lemon\christofides_tsp.h" />
+    <ClInclude Include="..\..\Libs\lemon\circulation.h" />
+    <ClInclude Include="..\..\Libs\lemon\clp.h" />
+    <ClInclude Include="..\..\Libs\lemon\color.h" />
+    <ClInclude Include="..\..\Libs\lemon\concepts\bpgraph.h" />
+    <ClInclude Include="..\..\Libs\lemon\concepts\digraph.h" />
+    <ClInclude Include="..\..\Libs\lemon\concepts\graph.h" />
+    <ClInclude Include="..\..\Libs\lemon\concepts\graph_components.h" />
+    <ClInclude Include="..\..\Libs\lemon\concepts\heap.h" />
+    <ClInclude Include="..\..\Libs\lemon\concepts\maps.h" />
+    <ClInclude Include="..\..\Libs\lemon\concepts\path.h" />
+    <ClInclude Include="..\..\Libs\lemon\concept_check.h" />
+    <ClInclude Include="..\..\Libs\lemon\config.h" />
+    <ClInclude Include="..\..\Libs\lemon\connectivity.h" />
+    <ClInclude Include="..\..\Libs\lemon\core.h" />
+    <ClInclude Include="..\..\Libs\lemon\cost_scaling.h" />
+    <ClInclude Include="..\..\Libs\lemon\counter.h" />
+    <ClInclude Include="..\..\Libs\lemon\cplex.h" />
+    <ClInclude Include="..\..\Libs\lemon\cycle_canceling.h" />
+    <ClInclude Include="..\..\Libs\lemon\dfs.h" />
+    <ClInclude Include="..\..\Libs\lemon\dheap.h" />
+    <ClInclude Include="..\..\Libs\lemon\dijkstra.h" />
+    <ClInclude Include="..\..\Libs\lemon\dim2.h" />
+    <ClInclude Include="..\..\Libs\lemon\dimacs.h" />
+    <ClInclude Include="..\..\Libs\lemon\edge_set.h" />
+    <ClInclude Include="..\..\Libs\lemon\edmonds_karp.h" />
+    <ClInclude Include="..\..\Libs\lemon\elevator.h" />
+    <ClInclude Include="..\..\Libs\lemon\error.h" />
+    <ClInclude Include="..\..\Libs\lemon\euler.h" />
+    <ClInclude Include="..\..\Libs\lemon\fib_heap.h" />
+    <ClInclude Include="..\..\Libs\lemon\fractional_matching.h" />
+    <ClInclude Include="..\..\Libs\lemon\full_graph.h" />
+    <ClInclude Include="..\..\Libs\lemon\glpk.h" />
+    <ClInclude Include="..\..\Libs\lemon\gomory_hu.h" />
+    <ClInclude Include="..\..\Libs\lemon\graph_to_eps.h" />
+    <ClInclude Include="..\..\Libs\lemon\greedy_tsp.h" />
+    <ClInclude Include="..\..\Libs\lemon\grid_graph.h" />
+    <ClInclude Include="..\..\Libs\lemon\grosso_locatelli_pullan_mc.h" />
+    <ClInclude Include="..\..\Libs\lemon\hao_orlin.h" />
+    <ClInclude Include="..\..\Libs\lemon\hartmann_orlin_mmc.h" />
+    <ClInclude Include="..\..\Libs\lemon\howard_mmc.h" />
+    <ClInclude Include="..\..\Libs\lemon\hypercube_graph.h" />
+    <ClInclude Include="..\..\Libs\lemon\insertion_tsp.h" />
+    <ClInclude Include="..\..\Libs\lemon\karp_mmc.h" />
+    <ClInclude Include="..\..\Libs\lemon\kruskal.h" />
+    <ClInclude Include="..\..\Libs\lemon\lassert.h" />
+    <ClInclude Include="..\..\Libs\lemon\lgf_reader.h" />
+    <ClInclude Include="..\..\Libs\lemon\lgf_writer.h" />
+    <ClInclude Include="..\..\Libs\lemon\list_graph.h" />
+    <ClInclude Include="..\..\Libs\lemon\lmath.h" />
+    <ClInclude Include="..\..\Libs\lemon\lp.h" />
+    <ClInclude Include="..\..\Libs\lemon\lp_base.h" />
+    <ClInclude Include="..\..\Libs\lemon\lp_skeleton.h" />
+    <ClInclude Include="..\..\Libs\lemon\maps.h" />
+    <ClInclude Include="..\..\Libs\lemon\matching.h" />
+    <ClInclude Include="..\..\Libs\lemon\max_cardinality_search.h" />
+    <ClInclude Include="..\..\Libs\lemon\min_cost_arborescence.h" />
+    <ClInclude Include="..\..\Libs\lemon\nagamochi_ibaraki.h" />
+    <ClInclude Include="..\..\Libs\lemon\nauty_reader.h" />
+    <ClInclude Include="..\..\Libs\lemon\nearest_neighbor_tsp.h" />
+    <ClInclude Include="..\..\Libs\lemon\network_simplex.h" />
+    <ClInclude Include="..\..\Libs\lemon\opt2_tsp.h" />
+    <ClInclude Include="..\..\Libs\lemon\pairing_heap.h" />
+    <ClInclude Include="..\..\Libs\lemon\path.h" />
+    <ClInclude Include="..\..\Libs\lemon\planarity.h" />
+    <ClInclude Include="..\..\Libs\lemon\preflow.h" />
+    <ClInclude Include="..\..\Libs\lemon\quad_heap.h" />
+    <ClInclude Include="..\..\Libs\lemon\radix_heap.h" />
+    <ClInclude Include="..\..\Libs\lemon\radix_sort.h" />
+    <ClInclude Include="..\..\Libs\lemon\random.h" />
+    <ClInclude Include="..\..\Libs\lemon\smart_graph.h" />
+    <ClInclude Include="..\..\Libs\lemon\soplex.h" />
+    <ClInclude Include="..\..\Libs\lemon\static_graph.h" />
+    <ClInclude Include="..\..\Libs\lemon\suurballe.h" />
+    <ClInclude Include="..\..\Libs\lemon\time_measure.h" />
+    <ClInclude Include="..\..\Libs\lemon\tolerance.h" />
+    <ClInclude Include="..\..\Libs\lemon\unionfind.h" />
+    <ClInclude Include="..\..\Source\CmdLineParser.h" />
+    <ClInclude Include="..\..\Source\CvrpCaller.h" />
+    <ClInclude Include="..\..\Source\GrbCaller.h" />
+    <ClInclude Include="..\..\Source\NetflowCaller.h" />
+    <ClInclude Include="..\..\Source\Parameters.h" />
+    <ClInclude Include="..\..\Source\Solution.h" />
+    <ClInclude Include="..\..\Source\Solver.h" />
+    <ClInclude Include="..\..\Source\TypeDef.h" />
+    <ClInclude Include="..\..\Source\Untils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Libs\CVRP\CrossOver.cpp" />
+    <ClCompile Include="..\..\Libs\CVRP\CvrpParameters.cpp" />
+    <ClCompile Include="..\..\Libs\CVRP\CvrpTypeDef.cpp" />
+    <ClCompile Include="..\..\Libs\CVRP\Framework.cpp" />
+    <ClCompile Include="..\..\Libs\CVRP\Individual.cpp" />
+    <ClCompile Include="..\..\Libs\CVRP\NagataBase.cpp" />
+    <ClCompile Include="..\..\Libs\CVRP\NagataLocalSearch.cpp" />
+    <ClCompile Include="..\..\Libs\CVRP\PathRelinking.cpp" />
+    <ClCompile Include="..\..\Libs\CVRP\Population.cpp" />
+    <ClCompile Include="..\..\Libs\CVRP\Repair.cpp" />
+    <ClCompile Include="..\..\Libs\Gurobi\Gurobi.cpp" />
+    <ClCompile Include="..\..\Libs\lemon\arg_parser.cc" />
+    <ClCompile Include="..\..\Libs\lemon\base.cc" />
+    <ClCompile Include="..\..\Libs\lemon\bits\windows.cc" />
+    <ClCompile Include="..\..\Libs\lemon\color.cc" />
+    <ClCompile Include="..\..\Libs\lemon\lp_base.cc" />
+    <ClCompile Include="..\..\Libs\lemon\lp_skeleton.cc" />
+    <ClCompile Include="..\..\Libs\lemon\lrandom.cc" />
+    <ClCompile Include="..\..\Source\CvrpCaller.cpp" />
+    <ClCompile Include="..\..\Source\Main.cpp" />
+    <ClCompile Include="..\..\Source\NetflowCaller.cpp" />
+    <ClCompile Include="..\..\Source\Parameters.cpp" />
+    <ClCompile Include="..\..\Source\Solution.cpp" />
+    <ClCompile Include="..\..\Source\Solver.cpp" />
+    <ClCompile Include="..\..\Source\SolverAdjusting.cpp" />
+    <ClCompile Include="..\..\Source\SolverFinding.cpp" />
+    <ClCompile Include="..\..\Source\SolverHasher.cpp" />
+    <ClCompile Include="..\..\Source\SolverRefining.cpp" />
+    <ClCompile Include="..\..\Source\TypeDef.cpp" />
+    <ClCompile Include="..\..\Source\Utils.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
