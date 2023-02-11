@@ -8,8 +8,8 @@
 #include "../Libs/CVRP/CvrpParameters.h"
 #include "../Libs/CVRP/NagataLocalSearch.h"
 #include "../Libs/CVRP/Repair.h"
-#include "../Libs//CVRP/Population.h"
-#include "../Libs//CVRP/Framework.h"
+#include "../Libs/CVRP/Population.h"
+#include "../Libs/CVRP/Framework.h"
 
 namespace hsh {
 	namespace mvirp {

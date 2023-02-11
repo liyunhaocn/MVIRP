@@ -24,13 +24,13 @@ int main(int argc, char* argv[]) {
         solver.params.totTimeLimit = 1800;
         solver.params.finding.timeOnce = 120;
         solver.params.adjusting.timeOnce = 60;
-        //solver.params.loadInstance("..\\Instances\\LargeH6\\L_abs5n200_3_H.dat");
-        solver.params.loadInstance("..\\Instances\\LargeL6\\L_abs6n200_4_L.dat");
-        //solver.params.loadInstance("..\\Instances\\SmallL3\\S_abs5n15_2_L3.dat");
-        //solver.params.loadInstance("..\\Instances\\SmallH3\\S_abs1n10_5_H3.dat");
-        //solver.params.loadInstance("..\\Instances\\SmallH6\\S_abs3n20_5_H6.dat");
-        //solver.params.loadInstance("..\\Instances\\SmallL6\\S_abs5n5_5_L6.dat");
-        //solver.params.loadInstance("..\\Instances\\SmallH6\\S_abs1n25_5_H6.dat"); // 该算例可引发 bug, 不要修改.
+        //solver.params.loadInstance("../Instances/LargeH6/L_abs5n200_3_H.dat");
+        solver.params.loadInstance("../Instances/LargeL6/L_abs6n200_4_L.dat");
+        //solver.params.loadInstance("../Instances/SmallL3/S_abs5n15_2_L3.dat");
+        //solver.params.loadInstance("../Instances/SmallH3/S_abs1n10_5_H3.dat");
+        //solver.params.loadInstance("../Instances/SmallH6/S_abs3n20_5_H6.dat");
+        //solver.params.loadInstance("../Instances/SmallL6/S_abs5n5_5_L6.dat");
+        //solver.params.loadInstance("../Instances/SmallH6/S_abs1n25_5_H6.dat"); // 该算例可引发 bug, 不要修改.
 
         solver.timer.setDuration(solver.params.totTimeLimit);
         solver.timer.startCounting();

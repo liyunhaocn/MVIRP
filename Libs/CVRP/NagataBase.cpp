@@ -1257,7 +1257,7 @@ void hsh::cvrp::NagataBase::updateLinks( Move & move , Individual & indiv )
 		int predNodeID = startNodeID , curNodeID = nextNodeID;
 		while ( curNodeID != endNodeID )
 		{
-			int( &curNodeLinks )[2] = ( curNodeID != 0 ? indiv.nodes[curNodeID].links : indiv.depots[routeID].links );
+			int * curNodeLinks = ( curNodeID != 0 ? indiv.nodes[curNodeID].links : indiv.depots[routeID].links );
 			// 将 `startNodeID` 对应节点到 `endNodeID` 对应节点之间 ( 不包括这两个节点 ) 的节点, 翻转连接信息
 			if ( curNodeLinks[0] != predNodeID ) { std::swap( curNodeLinks[0] , curNodeLinks[1] ); }
 			predNodeID = curNodeID;
@@ -1274,8 +1274,8 @@ void hsh::cvrp::NagataBase::updateLinks( Move & move , Individual & indiv )
 	{
 	case Move::Type::OPT2KIND1:
 		{
-			int( &linksPrevV )[2] = ( prevV != 0 ? indiv.nodes[prevV].links : indiv.depots[routeV].links ) ,
-				( &linksPrevW )[2] = ( prevW != 0 ? indiv.nodes[prevW].links : indiv.depots[routeW].links );
+			int *linksPrevV = ( prevV != 0 ? indiv.nodes[prevV].links : indiv.depots[routeV].links ) ,
+				* linksPrevW = ( prevW != 0 ? indiv.nodes[prevW].links : indiv.depots[routeW].links );
 
 			int &V_prevV = linksV[0] , &W_prevW = linksW[0] ,
 				&prevV_V = linksPrevV[1] , &prevW_W = linksPrevW[1];
@@ -1323,8 +1323,8 @@ void hsh::cvrp::NagataBase::updateLinks( Move & move , Individual & indiv )
 		}
 	case Move::Type::OPT2KIND2:
 		{
-			int( &linksPrevV )[2] = ( prevV != 0 ? indiv.nodes[prevV].links : indiv.depots[routeV].links ) ,
-				( &linksSuccW )[2] = ( succW != 0 ? indiv.nodes[succW].links : indiv.depots[routeW].links );
+			int * linksPrevV = ( prevV != 0 ? indiv.nodes[prevV].links : indiv.depots[routeV].links ) ,
+				* linksSuccW = ( succW != 0 ? indiv.nodes[succW].links : indiv.depots[routeW].links );
 
 			int &V_prevV = linksV[0] , &W_succW = linksW[1] ,
 				&prevV_V = linksPrevV[1] , &succW_W = linksSuccW[0];
@@ -1353,8 +1353,8 @@ void hsh::cvrp::NagataBase::updateLinks( Move & move , Individual & indiv )
 		}
 	case Move::Type::OPT2KIND3:
 		{
-			int( &linksSuccV )[2] = ( succV != 0 ? indiv.nodes[succV].links : indiv.depots[routeV].links ) ,
-				( &linksPrevW )[2] = ( prevW != 0 ? indiv.nodes[prevW].links : indiv.depots[routeW].links );
+			int * linksSuccV = ( succV != 0 ? indiv.nodes[succV].links : indiv.depots[routeV].links ) ,
+				* linksPrevW = ( prevW != 0 ? indiv.nodes[prevW].links : indiv.depots[routeW].links );
 
 			int &V_succV = linksV[1] , &W_prevW = linksW[0] ,
 				&succV_V = linksSuccV[0] , &prevW_W = linksPrevW[1];
@@ -1383,8 +1383,8 @@ void hsh::cvrp::NagataBase::updateLinks( Move & move , Individual & indiv )
 		}
 	case Move::Type::OPT2KIND4:
 		{
-			int( &linksSuccV )[2] = ( succV != 0 ? indiv.nodes[succV].links : indiv.depots[routeV].links ) ,
-				( &linksSuccW )[2] = ( succW != 0 ? indiv.nodes[succW].links : indiv.depots[routeW].links );
+			int * linksSuccV  = ( succV != 0 ? indiv.nodes[succV].links : indiv.depots[routeV].links ) ,
+				* linksSuccW  = ( succW != 0 ? indiv.nodes[succW].links : indiv.depots[routeW].links );
 
 			int &V_succV = linksV[1] , &W_succW = linksW[1] ,
 				&succV_V = linksSuccV[0] , &succW_W = linksSuccW[0];
@@ -1423,9 +1423,9 @@ void hsh::cvrp::NagataBase::updateLinks( Move & move , Individual & indiv )
 		}
 	case Move::Type::INSKIND1:
 		{
-			int( &linksPrevV )[2] = ( prevV != 0 ? indiv.nodes[prevV].links : indiv.depots[routeV].links ) ,
-				( &linksSuccV )[2] = ( succV != 0 ? indiv.nodes[succV].links : indiv.depots[routeV].links ) ,
-				( &linksPrevW )[2] = ( prevW != 0 ? indiv.nodes[prevW].links : indiv.depots[routeW].links );
+			int * linksPrevV = ( prevV != 0 ? indiv.nodes[prevV].links : indiv.depots[routeV].links ) ,
+				* linksSuccV = ( succV != 0 ? indiv.nodes[succV].links : indiv.depots[routeV].links ) ,
+				* linksPrevW = ( prevW != 0 ? indiv.nodes[prevW].links : indiv.depots[routeW].links );
 
 			int &V_prevV = linksV[0] , &V_succV = linksV[1] , &W_prevW = linksW[0] ,
 				&prevV_V = linksPrevV[1] , &succV_V = linksSuccV[0] ,
@@ -1461,9 +1461,9 @@ void hsh::cvrp::NagataBase::updateLinks( Move & move , Individual & indiv )
 		}
 	case Move::Type::INSKIND2:
 		{
-			int( &linksPrevV )[2] = ( prevV != 0 ? indiv.nodes[prevV].links : indiv.depots[routeV].links ) ,
-				( &linksSuccV )[2] = ( succV != 0 ? indiv.nodes[succV].links : indiv.depots[routeV].links ) ,
-				( &linksSuccW )[2] = ( succW != 0 ? indiv.nodes[succW].links : indiv.depots[routeW].links );
+			int * linksPrevV = ( prevV != 0 ? indiv.nodes[prevV].links : indiv.depots[routeV].links ) ,
+				* linksSuccV = ( succV != 0 ? indiv.nodes[succV].links : indiv.depots[routeV].links ) ,
+				* linksSuccW = ( succW != 0 ? indiv.nodes[succW].links : indiv.depots[routeW].links );
 
 			int &V_prevV = linksV[0] , &V_succV = linksV[1] , &W_succW = linksW[1] ,
 				&prevV_V = linksPrevV[1] , &succV_V = linksSuccV[0] ,
@@ -1499,9 +1499,9 @@ void hsh::cvrp::NagataBase::updateLinks( Move & move , Individual & indiv )
 		}
 	case Move::Type::INSKIND3:
 		{
-			int( &linksPrevW )[2] = ( prevW != 0 ? indiv.nodes[prevW].links : indiv.depots[routeW].links ) ,
-				( &linksSuccW )[2] = ( succW != 0 ? indiv.nodes[succW].links : indiv.depots[routeW].links ) ,
-				( &linksPrevV )[2] = ( prevV != 0 ? indiv.nodes[prevV].links : indiv.depots[routeV].links );
+			int * linksPrevW = ( prevW != 0 ? indiv.nodes[prevW].links : indiv.depots[routeW].links ) ,
+				* linksSuccW = ( succW != 0 ? indiv.nodes[succW].links : indiv.depots[routeW].links ) ,
+				* linksPrevV = ( prevV != 0 ? indiv.nodes[prevV].links : indiv.depots[routeV].links );
 
 			int &W_prevW = linksW[0] , &W_succW = linksW[1] , &V_prevV = linksV[0] ,
 				&prevW_W = linksPrevW[1] , &succW_W = linksSuccW[0] ,
@@ -1537,9 +1537,9 @@ void hsh::cvrp::NagataBase::updateLinks( Move & move , Individual & indiv )
 		}
 	case Move::Type::INSKIND4:
 		{
-			int( &linksPrevW )[2] = ( prevW != 0 ? indiv.nodes[prevW].links : indiv.depots[routeW].links ) ,
-				( &linksSuccW )[2] = ( succW != 0 ? indiv.nodes[succW].links : indiv.depots[routeW].links ) ,
-				( &linksSuccV )[2] = ( succV != 0 ? indiv.nodes[succV].links : indiv.depots[routeV].links );
+			int * linksPrevW = ( prevW != 0 ? indiv.nodes[prevW].links : indiv.depots[routeW].links ) ,
+				* linksSuccW = ( succW != 0 ? indiv.nodes[succW].links : indiv.depots[routeW].links ) ,
+				* linksSuccV = ( succV != 0 ? indiv.nodes[succV].links : indiv.depots[routeV].links );
 
 			int &W_prevW = linksW[0] , &W_succW = linksW[1] , &V_succV = linksV[1] ,
 				&prevW_W = linksPrevW[1] , &succW_W = linksSuccW[0] ,
@@ -1577,10 +1577,10 @@ void hsh::cvrp::NagataBase::updateLinks( Move & move , Individual & indiv )
 		{
 			int prevPrevW = ( prevW != 0 ? indiv.nodes[prevW].links[0] : indiv.depots[routeW].links[0] );
 
-			int( &linksPrevV )[2] = ( prevV != 0 ? indiv.nodes[prevV].links : indiv.depots[routeV].links ) ,
-				( &linksSuccV )[2] = ( succV != 0 ? indiv.nodes[succV].links : indiv.depots[routeV].links ) ,
-				( &linksPrevW )[2] = ( prevW != 0 ? indiv.nodes[prevW].links : indiv.depots[routeW].links ) ,
-				( &linksPrevPrevW )[2] = ( prevPrevW != 0 ? indiv.nodes[prevPrevW].links : indiv.depots[routeW].links );
+			int * linksPrevV = ( prevV != 0 ? indiv.nodes[prevV].links : indiv.depots[routeV].links ) ,
+				* linksSuccV = ( succV != 0 ? indiv.nodes[succV].links : indiv.depots[routeV].links ) ,
+				* linksPrevW = ( prevW != 0 ? indiv.nodes[prevW].links : indiv.depots[routeW].links ) ,
+				* linksPrevPrevW = ( prevPrevW != 0 ? indiv.nodes[prevPrevW].links : indiv.depots[routeW].links );
 
 
 			int &V_prevV = linksV[0] , &V_succV = linksV[1] , &W_prevW = linksW[0] ,
@@ -1607,10 +1607,10 @@ void hsh::cvrp::NagataBase::updateLinks( Move & move , Individual & indiv )
 		{
 			int succSuccW = ( succW != 0 ? indiv.nodes[succW].links[1] : indiv.depots[routeW].links[1] );
 
-			int( &linksPrevV )[2] = ( prevV != 0 ? indiv.nodes[prevV].links : indiv.depots[routeV].links ) ,
-				( &linksSuccV )[2] = ( succV != 0 ? indiv.nodes[succV].links : indiv.depots[routeV].links ) ,
-				( &linksSuccW )[2] = ( succW != 0 ? indiv.nodes[succW].links : indiv.depots[routeW].links ) ,
-				( &linksSuccSuccW )[2] = ( succSuccW != 0 ? indiv.nodes[succSuccW].links : indiv.depots[routeW].links );
+			int * linksPrevV = ( prevV != 0 ? indiv.nodes[prevV].links : indiv.depots[routeV].links ) ,
+				* linksSuccV = ( succV != 0 ? indiv.nodes[succV].links : indiv.depots[routeV].links ) ,
+				* linksSuccW = ( succW != 0 ? indiv.nodes[succW].links : indiv.depots[routeW].links ) ,
+				* linksSuccSuccW = ( succSuccW != 0 ? indiv.nodes[succSuccW].links : indiv.depots[routeW].links );
 
 
 			int &V_prevV = linksV[0] , &V_succV = linksV[1] , &W_succW = linksW[1] ,
@@ -1638,8 +1638,8 @@ void hsh::cvrp::NagataBase::updateLinks( Move & move , Individual & indiv )
 			*/
 			succW = ( W != 0 ? indiv.nodes[W].links[1] : indiv.depots[routeW].links[1] );
 
-			int( &linksSuccV )[2] = ( succV != 0 ? indiv.nodes[succV].links : indiv.depots[routeV].links ) ,
-				( &linksSuccW )[2] = ( succW != 0 ? indiv.nodes[succW].links : indiv.depots[routeW].links );
+			int * linksSuccV = ( succV != 0 ? indiv.nodes[succV].links : indiv.depots[routeV].links ) ,
+				* linksSuccW = ( succW != 0 ? indiv.nodes[succW].links : indiv.depots[routeW].links );
 
 			int &V_succV = linksV[1] , &W_succW = ( W != 0 ? linksW[1] : indiv.depots[routeW].links[1] ) ,
 				&succV_V = linksSuccV[0] , &succW_W = linksSuccW[0];
@@ -1660,8 +1660,8 @@ void hsh::cvrp::NagataBase::updateLinks( Move & move , Individual & indiv )
 			*/
 			succW = W != 0 ? indiv.nodes[W].links[1] : indiv.depots[routeW].links[1];
 
-			int( &linksSuccV )[2] = ( succV != 0 ? indiv.nodes[succV].links : indiv.depots[routeV].links ) ,
-				( &linksSuccW )[2] = ( succW != 0 ? indiv.nodes[succW].links : indiv.depots[routeW].links );
+			int * linksSuccV = ( succV != 0 ? indiv.nodes[succV].links : indiv.depots[routeV].links ) ,
+				* linksSuccW = ( succW != 0 ? indiv.nodes[succW].links : indiv.depots[routeW].links );
 
 			int &V_succV = linksV[1] , &W_succW = ( W != 0 ? linksW[1] : indiv.depots[routeW].links[1] ) ,
 				&succV_V = linksSuccV[0] , &succW_W = linksSuccW[0];

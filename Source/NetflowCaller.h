@@ -1,12 +1,13 @@
 #pragma once
 #include "Parameters.h"
 #include "Solution.h"
-#include "lemon/network_simplex.h"
-#include "lemon/cost_scaling.h"
-#include "lemon/capacity_scaling.h"
-#include "lemon/cycle_canceling.h"
-#include "lemon/smart_graph.h"
-#include "lemon/full_graph.h"
+
+#include "../Libs/lemon/network_simplex.h"
+#include "../Libs/lemon/cost_scaling.h"
+#include "../Libs/lemon/capacity_scaling.h"
+#include "../Libs/lemon/cycle_canceling.h"
+#include "../Libs/lemon/smart_graph.h"
+#include "../Libs/lemon/full_graph.h"
 
 namespace hsh {
 	namespace mvirp {
@@ -22,9 +23,9 @@ namespace hsh {
 			using DemaMap = typename Graph::template ArcMap<int>;
 			Parameters &params;
 			Graph g;
-			CostMap *costPtr;
-			CapaMap *capaPtr;
-			DemaMap *demaPtr;
+			CostMap *costPtr = nullptr;
+			CapaMap *capaPtr = nullptr;
+			DemaMap *demaPtr = nullptr;
 			int flowAmount = 0;
 			NetSplex* netSplexPtr;
 			CostScal *costScalPtr;

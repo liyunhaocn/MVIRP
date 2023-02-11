@@ -14,6 +14,7 @@ bool hsh::mvirp::CvrpCaller::solve(ID period, Solution & sln, Mode mode, int spe
 		return runWithPop(period, sln, specNumRou, replacedThres);
     }
     }
+    return false;
 }
 
 void hsh::mvirp::CvrpCaller::subgraphToInstance(ID periodId, Solution & sln, int specNumRou) {
