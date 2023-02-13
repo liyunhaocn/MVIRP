@@ -12,6 +12,9 @@
 #include <numeric>
 #include "Untils.h"
 #include <iomanip>
+#include <cmath>
+#include <limits>
+#include <climits>
 
 namespace hsh {
 	namespace mvirp {

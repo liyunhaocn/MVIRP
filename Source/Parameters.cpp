@@ -1,4 +1,6 @@
+
 #include "Parameters.h"
+#include <cmath>
 
 bool hsh::mvirp::Parameters::loadInstance(Str instPath) {
 	using namespace std;

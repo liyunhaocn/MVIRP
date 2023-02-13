@@ -3,6 +3,7 @@
 #include <vector>
 #include <numeric>
 #include <ctime>
+#include <limits>
 
 namespace hsh {
     namespace mvirp {

@@ -2,6 +2,8 @@
 #include "TypeDef.h"
 #include "Parameters.h"
 
+#include <cmath>
+
 namespace hsh {
     namespace mvirp {
 
