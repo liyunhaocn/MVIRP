@@ -11,6 +11,7 @@
 #include "Flag.h"
 
 #include <functional>
+#include <limits>
 
 #include "gurobi_c++.h"
 

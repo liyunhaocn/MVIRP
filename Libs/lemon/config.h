@@ -19,7 +19,7 @@
 /* #undef LEMON_DEFAULT_MIP */
 
 /* #undef LEMON_USE_PTHREAD */
-#define LEMON_USE_WIN32_THREADS 1
+//#define LEMON_USE_WIN32_THREADS 1
 
 #ifdef WIN32
 #define LEMON_WIN32

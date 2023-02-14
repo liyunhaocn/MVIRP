@@ -28,6 +28,6 @@
 #include "../Libs/CVRP/Repair.cpp"
 
 #include "../Libs/Gurobi/Gurobi.cpp"
-#include "../Libs/Delaunator/delaunator.hpp"
+#include "../Libs/Delaunator/delaunator.cpp"
 
 #include "../Libs/lemon/bits/windows.cc"
