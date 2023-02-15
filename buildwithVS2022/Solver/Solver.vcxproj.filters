@@ -61,9 +61,6 @@
     <ClInclude Include="..\..\Libs\CVRP\Repair.h">
       <Filter>CVRP</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Libs\Delaunator\delaunator.hpp">
-      <Filter>Delaunator</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Libs\Gurobi\Flag.h">
       <Filter>Gurobi</Filter>
     </ClInclude>
@@ -409,6 +406,9 @@
     <ClInclude Include="..\..\Source\Untils.h">
       <Filter>Source</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Libs\Delaunator\delaunator.h">
+      <Filter>Delaunator</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Libs\CVRP\CrossOver.cpp">
@@ -500,6 +500,9 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\Utils.cpp">
       <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Libs\Delaunator\delaunator.cpp">
+      <Filter>Delaunator</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

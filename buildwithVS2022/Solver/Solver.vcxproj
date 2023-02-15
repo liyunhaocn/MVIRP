@@ -151,7 +151,7 @@
     <ClInclude Include="..\..\Libs\CVRP\PathRelinking.h" />
     <ClInclude Include="..\..\Libs\CVRP\Population.h" />
     <ClInclude Include="..\..\Libs\CVRP\Repair.h" />
-    <ClInclude Include="..\..\Libs\Delaunator\delaunator.hpp" />
+    <ClInclude Include="..\..\Libs\Delaunator\delaunator.h" />
     <ClInclude Include="..\..\Libs\Gurobi\Flag.h" />
     <ClInclude Include="..\..\Libs\Gurobi\Gurobi.h" />
     <ClInclude Include="..\..\Libs\Gurobi\Preprocessor.h" />
@@ -279,6 +279,7 @@
     <ClCompile Include="..\..\Libs\CVRP\PathRelinking.cpp" />
     <ClCompile Include="..\..\Libs\CVRP\Population.cpp" />
     <ClCompile Include="..\..\Libs\CVRP\Repair.cpp" />
+    <ClCompile Include="..\..\Libs\Delaunator\delaunator.cpp" />
     <ClCompile Include="..\..\Libs\Gurobi\Gurobi.cpp" />
     <ClCompile Include="..\..\Libs\lemon\arg_parser.cc" />
     <ClCompile Include="..\..\Libs\lemon\base.cc" />

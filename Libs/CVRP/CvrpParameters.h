@@ -1,6 +1,6 @@
 #pragma once
 #include "CvrpTypeDef.h"
-#include "../Source/Parameters.h"
+#include "../../Source/Parameters.h"
 
 namespace hsh
 {

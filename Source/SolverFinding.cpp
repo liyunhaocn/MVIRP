@@ -1,5 +1,5 @@
 #include "Solver.h"
-#include "Delaunator/delaunator.hpp"
+#include "Delaunator/delaunator.h"
 
 void hsh::mvirp::Solver::structureFinding(Solution &sln) {
     using namespace std;
