@@ -1,4 +1,7 @@
 #include "Solver.h"
+#include "json.h"
+
+using Json = nlohmann::json;
 
 hsh::mvirp::Solver::Solver()
 {
@@ -10,7 +13,7 @@ hsh::mvirp::Solver::~Solver()
 
 int hsh::mvirp::Solver::run(int argc, char *argv[])
 {
-    // 日志控制
+
     Log << std::fixed << std::setprecision(3);
     Log.stat[(size_t)Logger::Type::Db] = 0;
     Log.stat[(size_t)Logger::Type::Fd] = 0;
@@ -19,35 +22,25 @@ int hsh::mvirp::Solver::run(int argc, char *argv[])
     Log.stat[(size_t)Logger::Type::Bf] = 0;
     Log.stat[(size_t)Logger::Type::Nf] = 0;
 
-    // 参数解析, 接受参数:
-    // [1]totTimeLimit, [2]timeSeed
-    // [3]instDir, [4]instName, [5]instExtName,
-    // [6]slnDir, [7]slnName, [8]slnExtName
-    if (argc != 9) {
-        Log[Logger::Type::Info] << "Size of arguments error." << std::endl;
-        return -1;
+    params.loadCommandParameters(argc, argv);
+
+    std::ifstream ifs(params.parametersPath);
+    if (ifs.fail()) {
+        std::cout << "can't open parameters file,use the default parameters" << std::endl;
     }
-    int argi = 1;
-    params.totTimeLimit = atoi(argv[argi++]);
-    params.timeSeed = atoi(argv[argi++]);
-    params.instDir = argv[argi++];
-    params.instName = argv[argi++];
-    params.instExtName = argv[argi++];
-    params.slnDir = argv[argi++];
-    params.slnName = argv[argi++];
-    params.slnExtName = argv[argi++];
+    else {
+        Json allJson;
+        ifs >> allJson;
+        Json apsJson = allJson["AlgorithmParameters"];
+        // initial commandLine with Josn
+        params.from_json(allJson, params);
+    }
 
-    Str path = params.slnDir + "out_" + params.slnName + params.slnExtName;
-    Log[Logger::Type::Info] << "Solution will be saved to path: " << path << std::endl;
-
-    params.setTimeSeed(params.timeSeed);
-    params.loadInstance(params.instDir + params.instName + params.instExtName);
+    params.setTimeSeed(params.randomSeed);
+    params.loadInstance(params.instancePath);
 
     timer.setDuration(params.totTimeLimit);
     timer.startCounting();
-
-    params.finding.timeOnce = 60;
-    params.adjusting.timeOnce = 60;
 
     bestFinding.init(params);
     structureFinding(bestFinding);
@@ -69,7 +62,11 @@ int hsh::mvirp::Solver::run(int argc, char *argv[])
 
 void hsh::mvirp::Solver::saveBest()
 {
-	Str path = params.slnDir + "out_" + params.slnName + params.slnExtName;
+    Str outputName =  params.instancePath;
+    outputName.erase(remove_if(outputName.begin(), outputName.end(), [=](char c) {return c == '.'; }), outputName.end());
+    outputName.erase(remove_if(outputName.begin(), outputName.end(), [=](char c) {return c == '/'; }), outputName.end());
+
+	Str path = params.outputDir + "/out_" + outputName + ".txt";
 	bestRefining.outputDimacsFmt(path, true);
     Log[Logger::Type::Cri] << "Solution saved to path: " << path << std::endl;
 }

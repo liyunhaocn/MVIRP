@@ -4,14 +4,14 @@ bool hsh::mvirp::CvrpCaller::solve(ID period, Solution & sln, Mode mode, int spe
     subgraphToInstance(period, sln, specNumRou);
     if (!nodeMap.empty() && nodeMap[0] != 0) { throw "cvrp.solve(): dismiss depot."; }
     switch (mode) {
-    case Mode::GenInit : {
+    case Mode::GenInit: {
         return runGenInit(period, sln, specNumRou, replacedThres);
     }
     case Mode::AsInit: {
         return runAsInitSln(period, sln, specNumRou, replacedThres);
     }
     case Mode::Pop: {
-		return runWithPop(period, sln, specNumRou, replacedThres);
+        return runWithPop(period, sln, specNumRou, replacedThres);
     }
     }
     return false;

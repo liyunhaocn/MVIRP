@@ -35,13 +35,19 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)..\Deploy\</OutDir>
     <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\pch.cpp" />
-    <ClCompile Include="..\..\Source\test.cpp" />
+    <ClCompile Include="..\..\Source\testStage1.cpp" />
+    <ClCompile Include="..\..\Source\testStage2.cpp" />
+    <ClCompile Include="..\..\Source\testStage3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\pch.h" />

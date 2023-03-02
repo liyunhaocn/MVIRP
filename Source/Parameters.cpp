@@ -1,6 +1,7 @@
 
 #include "Parameters.h"
 #include <cmath>
+#include <sstream>
 
 bool hsh::mvirp::Parameters::loadInstance(Str instPath) {
 	using namespace std;
@@ -80,21 +81,46 @@ bool hsh::mvirp::Parameters::loadInstance(Str instPath) {
         cout << "vechile " << numVehicles << ", node " << numNodes << ", capacity " << vehCapacity << endl;
 	}
 	else {
-		cout << "Cannot open this file." << endl;
+		cout << "Cannot open this file. file path:" << instPath << endl;
 	}
 	return true;
 }
 
 bool hsh::mvirp::Parameters::setTimeSeed(TimeSeed timeSeed) {
     if (timeSeed == 0) {
-        this->timeSeed = time(nullptr);
-        srand(this->timeSeed);
+        this->randomSeed = time(nullptr);
+        srand(this->randomSeed);
     }
     else {
-        this->timeSeed = timeSeed;
+        this->randomSeed = timeSeed;
     }
-    std::cout << "time seed " << this->timeSeed << std::endl;
+    std::cout << "time seed " << this->randomSeed << std::endl;
     return true;
+}
+
+void hsh::mvirp::Parameters::loadCommandParameters(int argc, char* argv[]) {
+	
+	std::stringstream ss;
+
+	ss << "Usage: ./Solver instance output parameters						" << std::endl;
+	ss << "Positionals:														" <<std::endl;
+	ss << "  instance    string  required    the instance file path			" <<std::endl;
+	ss << "  output      string  required    the solution saved directory	" <<std::endl;
+	ss << "  parameters  string  required    the parameters file path		" <<std::endl;
+	ss << "																	" << std::endl;
+	ss << "Options:															" <<std::endl;
+	ss << "  -h,--help						 print help message and exit	" << std::endl;
+	
+
+	if (argc != 4) {
+		std::cout << ss.str() << std::endl;
+		exit(0);
+	}
+
+	this->instancePath = argv[1];
+	this->outputDir = argv[2];
+	this->parametersPath = argv[3];
+
 }
 
 hsh::mvirp::Parameters::Parameters() {}

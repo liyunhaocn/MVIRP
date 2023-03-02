@@ -19,7 +19,7 @@ bool hsh::mvirp::Solver::adjustPartial(Solution &sln, int perStart, int perLast)
     using namespace std;
     using MpSolverGurobi = goal::MpSolverGurobi;
     MpSolverGurobi grb;
-    grb.setSeed(params.timeSeed);
+    grb.setSeed(params.randomSeed);
     grb.setMaxThread(params.adjusting.maxThreads);
     grb.setTimeLimit(params.adjusting.timeOnce);
     grb.setOutput(Log.stat[(size_t)Logger::Type::Aj]);

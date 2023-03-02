@@ -63,21 +63,23 @@ namespace hsh {
             ~Solver();
             int run(int argc, char *argv[]);
 
-            // 寻找解的初始格局
+            // schedule generation
             void structureFinding(Solution &sln);
-
-            // 调整
+            // schedule optimization
             void structureAdjusting(Solution &sln);
-            bool adjustPartial(Solution &sln, int perStart, int perLast);
-
-            // 细化
+            // routing refinement
             void structureRefining(Solution &sln);
+            
             void makeMoves(Solution &sln, Vec<Move> &moves);
             void evalMoves(Solution &sln, Vec<Move> &moves);
             void takeMove(Solution &sln, Move &move);
+            void perturb(Solution& cur, Solution& base);
+
+
+            bool adjustPartial(Solution& sln, int perStart, int perLast);
+
             void chgVisLk(Solution &sln, Move &move, bool cleanSelfLoop);
             void rstVisLk(Solution &sln, Move &move);
-            void perturb(Solution &cur, Solution &base);
             void periodPtb(Solution &cur, Solution &base);
 
             // 输出

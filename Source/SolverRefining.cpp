@@ -6,7 +6,7 @@ void hsh::mvirp::Solver::structureRefining(Solution& sln) {
     int steps = 0, maxSteps = 20;
     Vec<Move> moves;
     while (!timer.isTimeOut()) {
-        while (steps < maxSteps) {
+        while (steps < maxSteps && !timer.isTimeOut()) {
             if (timer.isTimeOut()) { return; }
             ++steps;
             //Log[Logger::Type::Rf] << "make moves." << std::endl;
@@ -42,7 +42,7 @@ void hsh::mvirp::Solver::structureRefining(Solution& sln) {
         tmpSln.calcInvCost(true); // TODO[dbg]
         tmpSln.calcTraCost(true, true);
         steps = 0;
-        ++params.refining.timesPtb;
+        //++params.refining.timesPtb;
     }
 }
 

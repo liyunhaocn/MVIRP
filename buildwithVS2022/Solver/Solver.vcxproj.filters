@@ -409,6 +409,9 @@
     <ClInclude Include="..\..\Libs\Delaunator\delaunator.h">
       <Filter>Delaunator</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\json.h">
+      <Filter>Source</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Libs\CVRP\CrossOver.cpp">

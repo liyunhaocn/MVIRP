@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 
 #include "../../Source/TypeDef.h"
 #include "../../Source/Untils.h"

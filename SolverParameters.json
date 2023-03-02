@@ -1,0 +1,25 @@
+{
+    "randomSeed": 0,
+    "totalTimeLimit": 100,
+    "finding":{
+        "timeOnce": 10,
+        "maxThreads": 1,
+        "capaUsage": 0.9,
+        "szRandSubTour":10,
+        "policy":6
+    },
+    "adjusting":{
+        "timeOnce": 10,
+        "maxThreads": 1,
+        "capaUsage": 0.9,
+        "szRandSubTour":10,
+        "policy":6
+    },
+    "refining":{
+        "szLayer1":10,
+        "szLayer2":10,
+        "delDelivZero":true,
+        "maxTimesPtb":100, 
+        "timesPtb":0
+    }
+}

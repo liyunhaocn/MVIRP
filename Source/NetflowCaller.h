@@ -14,8 +14,8 @@ namespace hsh {
 		class NetflowCaller {
 		public:
 			using Graph = typename lemon::SmartDigraph;
-			using ValType = int; // 流量、容量、供应值是int类型
-			using CostType = double; // 单位流量开销是double类型
+			using ValType = int;
+			using CostType = double;
 			using NetSplex = typename lemon::NetworkSimplex<Graph, ValType, CostType>;
 			using CostScal = typename lemon::CostScaling<Graph, ValType, CostType>;
 			using CapaMap = typename Graph::template ArcMap<int>; // 这里的泛型是值的类型

@@ -9,7 +9,13 @@
     <ClCompile Include="..\..\Source\pch.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\test.cpp">
+    <ClCompile Include="..\..\Source\testStage1.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\testStage2.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\testStage3.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
@@ -17,5 +23,8 @@
     <ClInclude Include="..\..\Source\pch.h">
       <Filter>Source</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

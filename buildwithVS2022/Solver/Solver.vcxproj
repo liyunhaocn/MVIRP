@@ -22,7 +22,7 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{08FDA961-21CC-4601-8B2A-E967E3A2E6C1}</ProjectGuid>
     <RootNamespace>Solver</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -261,6 +261,7 @@
     <ClInclude Include="..\..\Source\CmdLineParser.h" />
     <ClInclude Include="..\..\Source\CvrpCaller.h" />
     <ClInclude Include="..\..\Source\GrbCaller.h" />
+    <ClInclude Include="..\..\Source\json.h" />
     <ClInclude Include="..\..\Source\NetflowCaller.h" />
     <ClInclude Include="..\..\Source\Parameters.h" />
     <ClInclude Include="..\..\Source\Solution.h" />

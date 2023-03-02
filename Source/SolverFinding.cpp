@@ -5,7 +5,7 @@ void hsh::mvirp::Solver::structureFinding(Solution &sln) {
     using namespace std;
     using MpSolverGurobi = goal::MpSolverGurobi;
     MpSolverGurobi grb;
-    grb.setSeed(params.timeSeed);
+    grb.setSeed(params.randomSeed);
     grb.setTimeLimit(params.finding.timeOnce);
     grb.setMaxThread(1);
     grb.setOutput(Log.stat[(size_t)Logger::Type::Fd]);
